@@ -6,16 +6,9 @@ const OrganizationSchema = new mongoose.Schema({
     description: String,
     staff: [
         {
-            nome: String,
             cpf: String,
-            cargo: String,
         }
-    ],
-    account: {
-        agency: String,
-        cc: String,
-        code: String,
-    }
+    ]
 })
 
 module.exports = mongoose.model('Organization', OrganizationSchema);
