@@ -4,7 +4,7 @@ const OrganizationSchema = new mongoose.Schema({
     id: String,
     name: String,
     description: String,
-    staff: [
+    members: [
         {
             cpf: String,
         }

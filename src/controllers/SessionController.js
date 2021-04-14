@@ -39,13 +39,10 @@ module.exports = {
         let user = await User.findOne({cpf});
         if(user){
             let Hpwd = crypto.createHash('md5').update(password).digest("hex").toString();
-            console.log(Hpwd);
             if (user.password == Hpwd){
-                console.log('cu');
                 const token = jwt.sign({
                         email: user.email,
-                        name: user.name,
-                        pwd: Hpwd
+                        name: user.name
                     },
                         process.env.TOKEN_SECRET,
                     {

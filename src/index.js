@@ -7,7 +7,7 @@ const routes = require('./routes');
 //estudar documentação da biblioteca express
 const app = express(); //subir aplicação
 
-mongoose.connect(MONGODB_PATH,
+mongoose.connect(process.env.MONGODB_PATH,
 {
     useNewUrlParser: true,
     useUnifiedTopology: true,
